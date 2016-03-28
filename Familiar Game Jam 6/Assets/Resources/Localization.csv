@@ -1,0 +1,53 @@
+key,en,es
+Buy.Money.1,WALLET,CARTERA
+Buy.Money.2,WAD,FAJO
+Buy.Money.3,BUNDLE,MONTÓN
+Buy.Money.4,BRIEFCASE,MALETÍN
+Buy.Money.5,SAFE,CAJA FUERTE
+Credits.CEO,CEO,CEO
+Credits.Designers,DESIGNERS,DISEÑADORES
+Credits.DeveloperManager,DEVELOPER MANAGER,DIRECTOR DE DESARROLLO
+Credits.Marketing,MARKETING,MARKETING
+Credits.MarketingManager,MARKETING MANAGER,DIRECTORA DE MARKETING
+Credits.Programmers,PROGRAMMERS,PROGRAMADORES
+Credits.SpecialForces,SPECIAL FORCES,FUERZAS ESPECIALES
+Menu.Button.Back,BACK,VOLVER
+Menu.Button.Leave,LEAVE,SALIR
+Menu.Button.Locker,LOCKER,TAQUILLA
+Menu.Button.Login,LOGIN,INICIAR SESION
+Menu.Button.No,NO,NO
+Menu.Button.Play,PLAY,JUGAR
+Menu.Button.Retry,RETRY,REINTENTAR
+Menu.Button.VideoForFreeTry,SEE A VIDEO TO RESUME LAST MISSION,VER UN VÍDEO PARA RETOMAR LA ÚLTIMA MISIÓN
+Menu.Button.Yes,YES,SÍ
+Menu.Panel.AreYouSure,ARE YOU SURE?,¿ESTÁS SEGURO?
+Menu.Panel.ComingSoon,COMING SOON...,PRÓXIMAMENTE...
+Menu.Panel.YouLose,YOU LOSE!,¡HAS PERDIDO!
+Menu.Tab.Boosters,BOOSTERS,MEJORAS
+Menu.Tab.Challenge,CHALLENGE,DESAFÍOS
+Menu.Tab.Packs,PACKS,PAQUETES
+Menu.Tab.Story,STORY,HISTORIA
+Mission.Completed,Completed!,¡Conseguido!
+Mission.Descriptions.GoalsBordered.Consecutive,Score {1} consecutive goals near the borders ({0} of {1}).,Mete {1} goles consecutivos cerca de los bordes ({0} de {1}).
+Mission.Descriptions.GoalsBordered.Normal,Score {1} goals near the borders ({0} of {1}).,Mete {1} goles cerca de los bordes ({0} de {1}).
+Mission.Descriptions.GoalsNormal.Consecutive,Score {1} consecutive goals ({0} of {1}).,Mete {1} goles consecutivos ({0} de {1}).
+Mission.Descriptions.GoalsNormal.Normal,Score {1} goals ({0} of {1}).,Mete {1} goles ({0} de {1}).
+Mission.Descriptions.HitsCrossbar.Consecutive,Hit the goal borders {1} consecutive times ({0} of {1}).,Golpea los bordes de la portería {1} veces consecutivas ({0} de {1}).
+Mission.Descriptions.HitsCrossbar.Normal,Hit the goal borders {1} times ({0} of {1}).,Golpea los bordes de la portería {1} veces ({0} de {1}).
+Mission.Descriptions.HitsTarget.Consecutive,Hit the targets {1} consecutive times ({0} of {1}).,Golpea las dianas {1} veces consecutivas ({0} de {1}).
+Mission.Descriptions.HitsTarget.Normal,Hit the targets {1} times ({0} of {1}).,Golpea las dianas {1} veces ({0} de {1}).
+Mission.Descriptions.Pockets.Consecutive,Insert the ball in a pocket {1} consecutive times ({0} of {1}).,Mete el balón en un agujero {1} veces consecutivas ({0} de {1}).
+Mission.Descriptions.Pockets.Normal,Insert the ball in a pocket {1} times ({0} of {1}).,Mete el balón en un agujero {1} veces ({0} de {1}).
+Mission.Descriptions.PointsGoal.Consecutive,Get {1} points by scoring goals consecutively ({0} of {1}).,Consigue {1} puntos metiendo goles de forma consecutiva ({0} de {1}).
+Mission.Descriptions.PointsGoal.Normal,Get {1} points by scoring goals ({0} of {1}).,Consigue {1} puntos metiendo goles de forma ({0} de {1}).
+Mission.Descriptions.PointsTarget.Consecutive,Get {1} points by hitting targets consecutively ({0} of {1}).,Consigue {1} puntos golpeando dianas de forma consecutiva ({0} de {1}).
+Mission.Descriptions.PointsTarget.Normal,Get {1} points by hitting targets ({0} of {1}).,Consigue {1} puntos golpeando dianas de forma ({0} de {1}).
+Mission.TutorialDescriptions.0,Tutorial: Score a goal to get 1 XP!,Tutorial: ¡Mete un gol para ganar 1 PE!
+Mission.TutorialDescriptions.1,Tutorial: Score three consecutive goals to get 3 XP!,Tutorial: ¡Mete tres goles consecutivos para ganar 3 PE!
+Mission.TutorialDescriptions.2,Tutorial: Score a goal with added spin to get 3 XP!,Tutorial: ¡Mete un gol con efecto para ganar 3 PE!
+Mission.TutorialDescriptions.3,Tutorial: Score a goal near the borders to get 5 XP!,Tutorial: ¡Mete un gol cerca de los bordes de la porteria para ganar 5 PE!
+Mission.TutorialDescriptions.4,Tutorial: Score ten goals in less than 60 seconds to get 5 XP!,Tutorial: ¡Mete 10 goles en menos de 60 segundos para ganar 5 PE!
+Stats.TotalKicks,KICKS,PATADAS
+Stats.TotalGoals,GOALS,GOLES
+Stats.SuccessRate,SUCCESS,ÉXITO
+Stats.Record,RECORD,RECORD
