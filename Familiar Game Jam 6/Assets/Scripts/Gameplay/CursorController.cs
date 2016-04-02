@@ -76,10 +76,11 @@ public class CursorController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject!=null){
+        if (coll.gameObject.tag.Equals("Damage")){
             powerWhat = "REVERSETIME";
-           
-           
+        }else if (coll.gameObject.tag.Equals("DownRever"))
+        {
+
         }
 
     }

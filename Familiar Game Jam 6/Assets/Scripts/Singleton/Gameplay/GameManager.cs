@@ -9,7 +9,8 @@ public sealed class GameManager : Singleton<GameManager>
 {
     // ---- ---- ---- ---- ---- ---- ---- ----
     // Atributos
-    // ---- ---- ---- ---- ---- ---- ---- ----
+
+    String nameScene;
     // Lenguaje
     private string gameLanguage;
     
@@ -41,9 +42,11 @@ public sealed class GameManager : Singleton<GameManager>
     // ---- ---- ---- ---- ---- ---- ---- ----
     public event Action<string> OnGameLanguageChanged = delegate { };
 
+    
+
     void OnLevelWasLoaded(int level)
     {
-        String nameScene=SceneManager.GetSceneAt(level).name;
+        nameScene = SceneManager.GetSceneAt(level).name;
         if (nameScene.Equals("AlphaGameplay"))
         {
 
@@ -107,7 +110,24 @@ public sealed class GameManager : Singleton<GameManager>
         GameManager.Instance.LoadData();
         Localization.Initialize();
     }
-    
+
+    void Start()
+    {
+        String nameScene = SceneManager.GetActiveScene().name;
+
+    }
+
+    void Update()
+    {
+        if (nameScene.Equals("AlphaGameplay"))
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+
+            }
+        }
+    }
+
     protected override void OnDestroy()
     {
         GameManager.Instance.SaveData();
