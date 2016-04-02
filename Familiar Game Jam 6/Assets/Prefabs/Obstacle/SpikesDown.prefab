@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21253016}
   - 61: {fileID: 6170562}
   - 50: {fileID: 5084384}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpikesDown
   m_TagString: Damage
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 112710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.366, y: -0.578, z: 0}
+  m_LocalPosition: {x: -0.012817619, y: -0.3685056, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

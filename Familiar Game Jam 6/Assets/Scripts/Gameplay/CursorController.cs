@@ -8,8 +8,10 @@ public class CursorController : MonoBehaviour {
     public float sensPlus;
     public float sensMin;
     public float time = 4;
+    public int lives;
     float timeA;
     string powerWhat = "NORMAL";
+    string damageWhat = "NODAMAGE";
 
 
     // Use this for initialization
@@ -65,6 +67,40 @@ public class CursorController : MonoBehaviour {
                     powerWhat = "NORMAL";
                 }
                 break;
+            case "LOSTLIVE":
+                if (timeA == time)
+                {
+                    GetComponent<Animator>().SetBool("damageP", true);
+                    lives--;
+                }
+                timeA -= Time.deltaTime;
+                if (timeA < 0)
+                {
+                    GetComponent<Animator>().SetBool("damageP", false);
+                    timeA = time;
+                    powerWhat = "NORMAL";
+                }
+                break;
+        }
+        switch (damageWhat)
+        {
+            case "NODAMGE":
+                break;
+
+            case "LOSTLIVE":
+                if (timeA == time)
+                {
+                    GetComponent<Animator>().SetBool("damageP", true);
+                    lives--;
+                }
+                timeA -= Time.deltaTime;
+                if (timeA < 0)
+                {
+                    GetComponent<Animator>().SetBool("damageP", false);
+                    timeA = time;
+                    powerWhat = "NORMAL";
+                }
+                break;
         }
 
 	}
@@ -76,13 +112,38 @@ public class CursorController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (coll.gameObject.tag.Equals("Damage")){
-            powerWhat = "REVERSETIME";
-        }else if (coll.gameObject.tag.Equals("DownRever"))
+         if (coll.gameObject.tag.Equals("DownRever"))
         {
-
+            
+        }else if (coll.gameObject.tag.Equals("Damage") && damageWhat.Equals("NODAMAGE"))
+        {
+            damageWhat = "LOSTLIVE";
         }
 
     }
-    
+
+    void OnCollisionExit2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag.Equals("Damage") && damageWhat.Equals("NODAMAGE"))
+        {
+            damageWhat = "LOSTLIVE";
+        }
+    }
+
+        void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag.Equals("Damage") && damageWhat.Equals("NODAMAGE"))
+        {
+            damageWhat = "LOSTLIVE";
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag.Equals("Damage") && damageWhat.Equals("NODAMAGE"))
+        {
+            damageWhat = "LOSTLIVE";
+        }
+    }
+
 }

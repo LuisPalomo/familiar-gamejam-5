@@ -119,13 +119,7 @@ public sealed class GameManager : Singleton<GameManager>
 
     void Update()
     {
-        if (nameScene.Equals("AlphaGameplay"))
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
 
-            }
-        }
     }
 
     protected override void OnDestroy()
