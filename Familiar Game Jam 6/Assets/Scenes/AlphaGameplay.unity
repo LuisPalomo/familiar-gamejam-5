@@ -127,24 +127,132 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 873591e762d31d74ea6cb453e792ebee, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &233806908 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11476468, guid: fa3dfe3a477bfd542ac6a0ae67cd459d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1196848811}
-  m_Script: {fileID: 11500000, guid: 79ce3ec5c4c3f9447b489f5f354fac64, type: 3}
---- !u!114 &537088350 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11482660, guid: fa3dfe3a477bfd542ac6a0ae67cd459d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1196848811}
-  m_Script: {fileID: 11500000, guid: 79ce3ec5c4c3f9447b489f5f354fac64, type: 3}
---- !u!114 &655129751 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11450358, guid: fa3dfe3a477bfd542ac6a0ae67cd459d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1196848811}
-  m_Script: {fileID: 11500000, guid: 79ce3ec5c4c3f9447b489f5f354fac64, type: 3}
+--- !u!1 &269104160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 269104162}
+  - 212: {fileID: 269104161}
+  - 60: {fileID: 269104163}
+  m_Layer: 0
+  m_Name: Electric Arc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &269104161
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 269104160}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300076, guid: ffcd10c0db7dbaf43999292b0a52d246, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &269104162
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 269104160}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+--- !u!60 &269104163
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 269104160}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.03125, y: 0.0625}
+      - {x: -0.046875, y: 0.0234375}
+      - {x: -0.046875, y: -0.015625}
+      - {x: -0.015625, y: -0.046875}
+      - {x: 0.046875, y: -0.046875}
+      - {x: 0.046875, y: 0.0546875}
+      - {x: 0.0390625, y: 0.0625}
+--- !u!1001 &676823415
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 472688, guid: ce4d3806e8f9a5f40b584c732d21b63d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.603
+      objectReference: {fileID: 0}
+    - target: {fileID: 472688, guid: ce4d3806e8f9a5f40b584c732d21b63d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.302
+      objectReference: {fileID: 0}
+    - target: {fileID: 472688, guid: ce4d3806e8f9a5f40b584c732d21b63d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472688, guid: ce4d3806e8f9a5f40b584c732d21b63d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472688, guid: ce4d3806e8f9a5f40b584c732d21b63d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472688, guid: ce4d3806e8f9a5f40b584c732d21b63d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472688, guid: ce4d3806e8f9a5f40b584c732d21b63d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 472688, guid: ce4d3806e8f9a5f40b584c732d21b63d, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 166378, guid: ce4d3806e8f9a5f40b584c732d21b63d, type: 2}
+      propertyPath: m_Name
+      value: Traps -Electric arc Blue
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ce4d3806e8f9a5f40b584c732d21b63d, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &679873122
 Prefab:
   m_ObjectHideFlags: 0
@@ -182,11 +290,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472684, guid: 0546fc14c98bd314aa8649ad982043f3, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 111352, guid: 0546fc14c98bd314aa8649ad982043f3, type: 2}
       propertyPath: m_TagString
-      value: Damage
+      value: DownRever
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0546fc14c98bd314aa8649ad982043f3, type: 2}
@@ -230,25 +338,252 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 5039424, guid: ccb90f55080d5b047a9cf2bd55c50585, type: 2}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccb90f55080d5b047a9cf2bd55c50585, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1004676452 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11442630, guid: fa3dfe3a477bfd542ac6a0ae67cd459d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1196848811}
-  m_Script: {fileID: 11500000, guid: 79ce3ec5c4c3f9447b489f5f354fac64, type: 3}
---- !u!114 &1096257214 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11451088, guid: fa3dfe3a477bfd542ac6a0ae67cd459d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1196848811}
-  m_Script: {fileID: 11500000, guid: 79ce3ec5c4c3f9447b489f5f354fac64, type: 3}
+--- !u!1 &933429610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 933429612}
+  - 212: {fileID: 933429611}
+  - 60: {fileID: 933429613}
+  m_Layer: 0
+  m_Name: Electric Arc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &933429611
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 933429610}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300068, guid: ffcd10c0db7dbaf43999292b0a52d246, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &933429612
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 933429610}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+--- !u!60 &933429613
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 933429610}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.03125, y: 0.0625}
+      - {x: -0.0546875, y: 0.0390625}
+      - {x: -0.0546875, y: 0}
+      - {x: -0.046875, y: -0.0234375}
+      - {x: -0.015625, y: -0.0546875}
+      - {x: 0.015625, y: -0.0546875}
+      - {x: 0.0625, y: -0.0390625}
+      - {x: 0.0625, y: 0.0546875}
+      - {x: 0.0546875, y: 0.0625}
+--- !u!1 &1079646895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1079646897}
+  - 212: {fileID: 1079646896}
+  - 60: {fileID: 1079646898}
+  m_Layer: 0
+  m_Name: Electric Arc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1079646896
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079646895}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300048, guid: ffcd10c0db7dbaf43999292b0a52d246, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &1079646897
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079646895}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+--- !u!60 &1079646898
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079646895}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.0390625, y: 0.0546875}
+      - {x: -0.0625, y: 0.0390625}
+      - {x: -0.0625, y: -0.0625}
+      - {x: 0.046875, y: -0.0625}
+      - {x: 0.0546875, y: -0.0546875}
+      - {x: 0.0546875, y: 0.0078125}
+      - {x: 0.0234375, y: 0.0546875}
+--- !u!1 &1104091970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1104091972}
+  - 212: {fileID: 1104091971}
+  - 60: {fileID: 1104091973}
+  m_Layer: 0
+  m_Name: Electric Arc blue (Up - Down)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1104091971
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1104091970}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300046, guid: ffcd10c0db7dbaf43999292b0a52d246, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &1104091972
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1104091970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.343, y: 0.087, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+--- !u!60 &1104091973
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1104091970}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.00015896559, y: 0.033421613}
+      - {x: -0.010222584, y: 0.019412056}
+      - {x: -0.027621925, y: -0.015863396}
+      - {x: -0.015863448, y: -0.06056675}
+      - {x: 0.014009684, y: -0.06443325}
+      - {x: 0.0025690794, y: -0.008130401}
+      - {x: 0.054767013, y: -0.022881128}
+      - {x: 0.062023014, y: 0.010222569}
 --- !u!1001 &1196848811
 Prefab:
   m_ObjectHideFlags: 0
@@ -256,10 +591,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 11496204, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
-      propertyPath: electricArcList.Array.size
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 448566, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0.71865755
@@ -292,76 +623,329 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 11496204, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
-      propertyPath: electricArcList.Array.data[0]
-      value: 
-      objectReference: {fileID: 233806908}
-    - target: {fileID: 11496204, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
-      propertyPath: electricArcList.Array.data[1]
-      value: 
-      objectReference: {fileID: 655129751}
-    - target: {fileID: 11496204, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
-      propertyPath: electricArcList.Array.data[2]
-      value: 
-      objectReference: {fileID: 1096257214}
-    - target: {fileID: 11496204, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
-      propertyPath: electricArcList.Array.data[3]
-      value: 
-      objectReference: {fileID: 2078576920}
-    - target: {fileID: 11496204, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
-      propertyPath: electricArcList.Array.data[4]
-      value: 
-      objectReference: {fileID: 1004676452}
-    - target: {fileID: 11496204, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
-      propertyPath: electricArcList.Array.data[5]
-      value: 
-      objectReference: {fileID: 1485293397}
-    - target: {fileID: 11496204, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
-      propertyPath: electricArcList.Array.data[6]
-      value: 
-      objectReference: {fileID: 537088350}
-    - target: {fileID: 11496204, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
-      propertyPath: electricArcList.Array.data[7]
-      value: 
-      objectReference: {fileID: 537088350}
-    - target: {fileID: 11496204, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
-      propertyPath: timeC
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 11496204, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
-      propertyPath: timeS
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa3dfe3a477bfd542ac6a0ae67cd459d, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1485293397 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11443478, guid: fa3dfe3a477bfd542ac6a0ae67cd459d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1196848811}
-  m_Script: {fileID: 11500000, guid: 79ce3ec5c4c3f9447b489f5f354fac64, type: 3}
---- !u!1 &1769782232 stripped
+--- !u!1 &1437302853
 GameObject:
-  m_PrefabParentObject: {fileID: 117626, guid: ccb90f55080d5b047a9cf2bd55c50585, type: 2}
-  m_PrefabInternal: {fileID: 849683253}
---- !u!95 &1769782233
-Animator:
-  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1769782232}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1437302855}
+  - 212: {fileID: 1437302854}
+  - 60: {fileID: 1437302856}
+  m_Layer: 0
+  m_Name: Electric Arc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1437302854
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1437302853}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: faf4d22e5499cb449ac2a4de790e3827, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300052, guid: ffcd10c0db7dbaf43999292b0a52d246, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &1437302855
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1437302853}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+--- !u!60 &1437302856
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1437302853}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.0078125, y: 0.0390625}
+      - {x: -0.046875, y: 0}
+      - {x: -0.0390625, y: -0.03125}
+      - {x: -0.0234375, y: -0.0546875}
+      - {x: 0.0078125, y: -0.0546875}
+      - {x: 0.0625, y: -0.0390625}
+      - {x: 0.0625, y: 0.03125}
+      - {x: 0.03125, y: 0.046875}
+--- !u!1 &1524271257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1524271259}
+  - 212: {fileID: 1524271258}
+  - 60: {fileID: 1524271260}
+  m_Layer: 0
+  m_Name: Electric Arc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1524271258
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1524271257}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300072, guid: ffcd10c0db7dbaf43999292b0a52d246, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &1524271259
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1524271257}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+--- !u!60 &1524271260
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1524271257}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.0390625, y: 0.0625}
+      - {x: -0.03125, y: 0.0625}
+      - {x: -0.046875, y: 0.03125}
+      - {x: -0.046875, y: 0.0078125}
+      - {x: -0.03125, y: -0.0625}
+      - {x: 0.03125, y: -0.0625}
+      - {x: 0.046875, y: -0.046875}
+      - {x: 0.046875, y: 0.0078125}
+--- !u!1 &1539003883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1539003885}
+  - 212: {fileID: 1539003884}
+  - 60: {fileID: 1539003886}
+  m_Layer: 0
+  m_Name: Electric Arc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1539003884
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539003883}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300054, guid: ffcd10c0db7dbaf43999292b0a52d246, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &1539003885
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539003883}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+--- !u!60 &1539003886
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1539003883}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.0625, y: 0.0390625}
+      - {x: -0.0625, y: -0.0390625}
+      - {x: -0.0546875, y: -0.046875}
+      - {x: 0.015625, y: -0.046875}
+      - {x: 0.0546875, y: -0.03125}
+      - {x: 0.0546875, y: 0.0390625}
+--- !u!1 &1868426879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1868426881}
+  - 212: {fileID: 1868426880}
+  - 60: {fileID: 1868426882}
+  m_Layer: 0
+  m_Name: Electric Arc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1868426880
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1868426879}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300050, guid: ffcd10c0db7dbaf43999292b0a52d246, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &1868426881
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1868426879}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.197, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+--- !u!60 &1868426882
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1868426879}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.0625, y: 0.046875}
+      - {x: -0.0625, y: -0.03125}
+      - {x: -0.03125, y: -0.046875}
+      - {x: 0.0625, y: -0.03125}
+      - {x: 0.0625, y: 0.03125}
+      - {x: 0.0390625, y: 0.046875}
 --- !u!1 &1930871125
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,7 +1007,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.9381818
+  orthographic size: 0.84313726
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -464,9 +1048,164 @@ MonoBehaviour:
   UnitsSize: 3
   constraint: 0
   camera: {fileID: 1930871129}
---- !u!114 &2078576920 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11424580, guid: fa3dfe3a477bfd542ac6a0ae67cd459d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1196848811}
-  m_Script: {fileID: 11500000, guid: 79ce3ec5c4c3f9447b489f5f354fac64, type: 3}
+--- !u!1 &1984528567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1984528569}
+  - 212: {fileID: 1984528568}
+  - 60: {fileID: 1984528570}
+  m_Layer: 0
+  m_Name: Electric Arc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1984528568
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1984528567}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300070, guid: ffcd10c0db7dbaf43999292b0a52d246, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &1984528569
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1984528567}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+--- !u!60 &1984528570
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1984528567}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.046875, y: 0.0625}
+      - {x: -0.0625, y: 0.0390625}
+      - {x: -0.0625, y: -0.03125}
+      - {x: -0.015625, y: -0.0546875}
+      - {x: 0.015625, y: -0.0546875}
+      - {x: 0.0546875, y: -0.0078125}
+      - {x: 0.0546875, y: 0.0390625}
+      - {x: 0.0390625, y: 0.0625}
+--- !u!1 &2038607555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2038607557}
+  - 212: {fileID: 2038607556}
+  - 60: {fileID: 2038607558}
+  m_Layer: 0
+  m_Name: Electric Arc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &2038607556
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038607555}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300074, guid: ffcd10c0db7dbaf43999292b0a52d246, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!4 &2038607557
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038607555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+--- !u!60 &2038607558
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038607555}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -0.0078125, y: 0.046875}
+      - {x: -0.0390625, y: 0.03125}
+      - {x: -0.0390625, y: -0.0625}
+      - {x: 0.03125, y: -0.0625}
+      - {x: 0.046875, y: -0.046875}
+      - {x: 0.046875, y: 0.015625}
+      - {x: 0.015625, y: 0.046875}

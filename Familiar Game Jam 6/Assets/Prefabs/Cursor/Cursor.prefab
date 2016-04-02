@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11495682}
   - 50: {fileID: 5039424}
   - 58: {fileID: 5868126}
+  - 95: {fileID: 9584948}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Player
@@ -47,7 +48,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &5868126
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -62,6 +63,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.08
+--- !u!95 &9584948
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117626}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: faf4d22e5499cb449ac2a4de790e3827, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11495682
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,6 +96,7 @@ MonoBehaviour:
   sensPlus: 0
   sensMin: 0
   time: 4
+  lives: 0
 --- !u!212 &21242088
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -117,11 +117,18 @@ public class CursorController : MonoBehaviour {
     {
          if (coll.gameObject.tag.Equals("DownRever"))
         {
-            
-        }else if (coll.gameObject.tag.Equals("Damage") && damageWhat.Equals("NODAMAGE"))
+            powerWhat = "REVERSETIME";
+
+        }
+        else if (coll.gameObject.tag.Equals("SensDown"))
+        {
+            powerWhat = "SENSMIN";
+        }
+        else if (coll.gameObject.tag.Equals("Damage") && damageWhat.Equals("NODAMAGE"))
         {
             damageWhat = "LOSTLIVE";
         }
+        
 
     }
 
