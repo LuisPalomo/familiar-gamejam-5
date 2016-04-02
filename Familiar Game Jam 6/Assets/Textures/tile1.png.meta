@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2abfb1a37691c964a9e4908b5c7563e1
-timeCreated: 1459601269
+timeCreated: 1459606995
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -30,7 +30,7 @@ TextureImporter:
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -52,7 +52,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -303,9 +303,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 176
+        y: 177
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,10 +313,10 @@ TextureImporter:
     - name: Cloud2
       rect:
         serializedVersion: 2
-        x: 16
-        y: 176
-        width: 32
-        height: 16
+        x: 17
+        y: 177
+        width: 30
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
