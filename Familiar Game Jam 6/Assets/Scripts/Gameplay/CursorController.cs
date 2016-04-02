@@ -17,6 +17,8 @@ public class CursorController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         timeA = time;
+        lives = GameManager.Instance.lives;
+
 	}
 	
 	// Update is called once per frame
@@ -72,6 +74,7 @@ public class CursorController : MonoBehaviour {
                 {
                     GetComponent<Animator>().SetBool("damageP", true);
                     lives--;
+                    GameManager.Instance.lives=lives;
                 }
                 timeA -= Time.deltaTime;
                 if (timeA < 0)
@@ -84,7 +87,7 @@ public class CursorController : MonoBehaviour {
         }
         switch (damageWhat)
         {
-            case "NODAMGE":
+            case "NODAMAGE":
                 break;
 
             case "LOSTLIVE":
@@ -98,7 +101,7 @@ public class CursorController : MonoBehaviour {
                 {
                     GetComponent<Animator>().SetBool("damageP", false);
                     timeA = time;
-                    powerWhat = "NORMAL";
+                    damageWhat = "NODAMAGE";
                 }
                 break;
         }

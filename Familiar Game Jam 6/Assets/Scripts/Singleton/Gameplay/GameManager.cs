@@ -11,6 +11,7 @@ public sealed class GameManager : Singleton<GameManager>
     // Atributos
 
     String nameScene;
+    public int lives;
     // Lenguaje
     private string gameLanguage;
     
