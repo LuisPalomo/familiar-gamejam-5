@@ -36,12 +36,17 @@ public sealed class GameManager : Singleton<GameManager>
     {
         get { return GameManager.Instance.gamePersistentData; }
     }
-    
     // ---- ---- ---- ---- ---- ---- ---- ----
     // Eventos
     // ---- ---- ---- ---- ---- ---- ---- ----
     public event Action<string> OnGameLanguageChanged = delegate { };
-    
+
+    void OnLevelWasLoaded(int level)
+    {
+            
+
+    }
+
     // ---- ---- ---- ---- ---- ---- ---- ----
     // Métodos
     // ---- ---- ---- ---- ---- ---- ---- ----
