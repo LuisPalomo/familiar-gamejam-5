@@ -43,13 +43,18 @@ public sealed class GameManager : Singleton<GameManager>
 
     void OnLevelWasLoaded(int level)
     {
-            
+        String nameScene=SceneManager.GetSceneAt(level).name;
+        if (nameScene.Equals("AlphaGameplay"))
+        {
+
+        }
 
     }
 
     // ---- ---- ---- ---- ---- ---- ---- ----
     // Métodos
     // ---- ---- ---- ---- ---- ---- ---- ----
+
     // Métodos de control
     public void ExitApplication()
     {
