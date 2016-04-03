@@ -110,6 +110,7 @@ public class CursorController : MonoBehaviour {
                 {
                     GetComponent<Animator>().SetBool("damageP", true);
                     lives--;
+				GameManager.Instance.lives--;
                 }
                 timeA -= Time.deltaTime;
                 if (timeA < 0)
