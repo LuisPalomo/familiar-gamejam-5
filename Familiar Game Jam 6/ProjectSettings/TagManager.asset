@@ -10,6 +10,7 @@ TagManager:
   - UpSens
   - Coins
   - EndLevel
+  - Life
   layers:
   - Default
   - TransparentFX

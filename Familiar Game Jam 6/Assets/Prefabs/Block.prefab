@@ -55,9 +55,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c00dec01f4e1b434a9274c04fd04626b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contents: 1
-  coinPrefab: {fileID: 0}
-  eggPrefab: {fileID: 0}
+  contents: 0
+  coinPrefab: {fileID: 134658, guid: 47196bacc8fece642962151ee4ff4857, type: 2}
+  eggPrefab: {fileID: 189242, guid: deb49d8a19980e6488719661c68c50e5, type: 2}
   starPrefab: {fileID: 0}
   spriteRenderer: {fileID: 21217514}
   usedSprite: {fileID: 21300010, guid: 2abfb1a37691c964a9e4908b5c7563e1, type: 3}
@@ -120,7 +120,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: coinPrefab
+      value: 
+      objectReference: {fileID: 134658, guid: 47196bacc8fece642962151ee4ff4857, type: 2}
+    - target: {fileID: 0}
+      propertyPath: contents
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: eggPrefab
+      value: 
+      objectReference: {fileID: 189242, guid: deb49d8a19980e6488719661c68c50e5, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 162356}
