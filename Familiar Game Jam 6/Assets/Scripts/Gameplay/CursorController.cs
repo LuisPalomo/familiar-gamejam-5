@@ -152,6 +152,11 @@ public class CursorController : MonoBehaviour {
         {
             damageWhat = "LOSTLIVE";
         }
+		else if (coll.gameObject.tag.Equals("Coins"))
+		{
+			GameManager.Instance.coins++;
+			Destroy (coll.gameObject);
+		}
         
 
     }

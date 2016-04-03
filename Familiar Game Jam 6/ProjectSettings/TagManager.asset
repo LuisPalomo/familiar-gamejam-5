@@ -8,6 +8,7 @@ TagManager:
   - DownRever
   - DownSens
   - UpSens
+  - Coins
   layers:
   - Default
   - TransparentFX
