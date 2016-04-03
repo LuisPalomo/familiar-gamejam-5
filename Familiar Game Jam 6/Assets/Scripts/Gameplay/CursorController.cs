@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class CursorController : MonoBehaviour {
@@ -14,6 +15,9 @@ public class CursorController : MonoBehaviour {
     string powerWhat = "NORMAL";
     string damageWhat = "NODAMAGE";
     Rect cameraRect;
+
+	//Evento de pantalla pasada
+	public event Action OnLevelFinish = delegate { };
 
 
     // Use this for initialization
@@ -157,6 +161,10 @@ public class CursorController : MonoBehaviour {
 		{
 			GameManager.Instance.coins++;
 			Destroy (coll.gameObject);
+		}
+		else if (coll.gameObject.tag.Equals("EndLevel"))
+		{
+			OnLevelFinish();
 		}
         
 

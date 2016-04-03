@@ -9,6 +9,7 @@ TagManager:
   - DownSens
   - UpSens
   - Coins
+  - EndLevel
   layers:
   - Default
   - TransparentFX
