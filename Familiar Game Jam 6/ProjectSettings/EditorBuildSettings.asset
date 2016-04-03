@@ -7,3 +7,11 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/AlphaP.unity
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/level1-Tuto.unity
+  - enabled: 1
+    path: Assets/Scenes/Level-LMGG.unity
+  - enabled: 1
+    path: Assets/Scenes/level3 - whereIs.unity

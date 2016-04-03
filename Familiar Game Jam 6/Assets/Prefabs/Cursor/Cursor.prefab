@@ -11,9 +11,9 @@ GameObject:
   - 212: {fileID: 21242088}
   - 114: {fileID: 11495682}
   - 50: {fileID: 5039424}
-  - 58: {fileID: 5868126}
   - 95: {fileID: 9584948}
   - 114: {fileID: 11427030}
+  - 58: {fileID: 5808312}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Player
@@ -50,7 +50,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &5868126
+--- !u!58 &5808312
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -58,12 +58,12 @@ CircleCollider2D:
   m_GameObject: {fileID: 117626}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: bf387268ee905a542b71135810803fbc, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.08
+  m_Radius: 0.04720973
 --- !u!95 &9584948
 Animator:
   serializedVersion: 3
@@ -111,6 +111,9 @@ MonoBehaviour:
   time: 4
   lives: 0
   cam: {fileID: 0}
+  coinSound: {fileID: 8300000, guid: b60d4d186119ff341ad674aea9bd8c6d, type: 3}
+  damageSound: {fileID: 8300000, guid: ab4383958b664024b80c2eb91d83375f, type: 3}
+  eggSound: {fileID: 8300000, guid: ab638bb7e8382bc4a889a34882a38dce, type: 3}
 --- !u!212 &21242088
 SpriteRenderer:
   m_ObjectHideFlags: 1

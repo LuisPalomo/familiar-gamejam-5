@@ -15,12 +15,17 @@ public class CursorController : MonoBehaviour {
     string powerWhat = "NORMAL";
     string damageWhat = "NODAMAGE";
     Rect cameraRect;
+    public AudioClip coinSound;
+    public AudioClip damageSound;
+    public AudioClip eggSound;
 
 
 
 
     // Use this for initialization
     void Start () {
+        Cursor.lockState = CursorLockMode.Locked;
+
         timeA = time;
         lives = GameManager.Instance.lives;
 
@@ -38,7 +43,7 @@ public class CursorController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Cursor.lockState = CursorLockMode.Locked;
+        
 
         switch (powerWhat)
         {
@@ -243,10 +248,11 @@ public class CursorController : MonoBehaviour {
 
 		else if (coll.gameObject.tag.Equals("EndLevel"))
 		{
-			GameManager.Instance.LevelFinish ();
+            GameManager.Instance.NextLevel();
 		}
 		else if (coll.gameObject.tag.Equals("Life"))
 		{
+            AudioManager.Instance.PlaySoundEffect(eggSound);
 			GameManager.Instance.lives++;
 			Destroy (coll.gameObject);
 		}
@@ -294,10 +300,12 @@ public class CursorController : MonoBehaviour {
         }
         else if (other.gameObject.tag.Equals("Damage") && damageWhat.Equals("NODAMAGE"))
         {
+            AudioManager.Instance.PlaySoundEffect(damageSound);
             damageWhat = "LOSTLIVE";
         }
 		else if (other.gameObject.tag.Equals("Coins"))
 		{
+            AudioManager.Instance.PlaySoundEffect(coinSound);
 			GameManager.Instance.coins++;
 			Destroy (other.gameObject);
 		}

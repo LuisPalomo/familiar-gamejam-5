@@ -144,6 +144,12 @@ public sealed class GameManager : Singleton<GameManager>
             Time.timeScale = 0.0f;
             StartCoroutine(ReturnToMainInSeconds(5.0f));
         }
+
+        
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            GameManager.Instance.NextLevel();
+        }
     }
 
     private IEnumerator ReturnToMainInSeconds(float p)
@@ -166,14 +172,14 @@ public sealed class GameManager : Singleton<GameManager>
     
 	public void LevelFinish(){
 		if (nameScene == "level1-Tuto") {
-			SceneManager.LoadScene ("Level-LMGG");
+			SceneManager.LoadScene (2);
 		}
 		else if (nameScene == "Level-LMGG") {
-			SceneManager.LoadScene ("level3 - whereIs");
+			SceneManager.LoadScene (3);
 		}
-		//else if (nameScene == "level3 - whereIs") {
-		//	SceneManager.LoadScene ("fin");
-		//}
+		else if (nameScene == "level3 - whereIs") {
+			SceneManager.LoadScene (0);
+		}
 
 	}
 
@@ -182,7 +188,12 @@ public sealed class GameManager : Singleton<GameManager>
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(0);
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
 }
