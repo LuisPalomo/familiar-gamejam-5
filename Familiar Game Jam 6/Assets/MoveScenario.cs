@@ -6,12 +6,15 @@ using Extensions.System.Colections;
 public class MoveScenario : MonoBehaviour {
 
     public float speed = 0.3f;
-    public List<GameObject> piezas;
+    private int numPieces = 0;
+    public int maxPieces = 10;
+    public List<GameObject> pieces;
+    public GameObject finalPiece;
 
 	// Use this for initialization
 	void Start () {
 
-        //GameObject piece = (GameObject)Instantiate(piezas.RandomItem(), transform.position + new Vector3(3f, -0.4f), Quaternion.identity);
+        //GameObject piece = (GameObject)Instantiate(pieces.RandomItem(), transform.position + new Vector3(3f, -0.4f), Quaternion.identity);
         //piece.transform.SetParent(this.transform);
 
     }
@@ -25,8 +28,20 @@ public class MoveScenario : MonoBehaviour {
     {
         if (col.gameObject.tag == "ScenarioGen")
         {
-            GameObject piece = (GameObject)Instantiate(piezas.RandomItem(), transform.position + new Vector3(3f, -0.4f), Quaternion.identity);
-            piece.transform.SetParent(this.transform);
+            if(numPieces < maxPieces)
+            {
+                numPieces++;
+                GameObject piece = (GameObject)Instantiate(pieces.RandomItem(), new Vector3(3, -0.4f), Quaternion.identity);
+                piece.transform.SetParent(this.transform);
+
+                this.GetComponent<BoxCollider2D>().offset += new Vector2(1, 0);
+            }
+            else
+            {
+                GameObject piece = (GameObject)Instantiate(finalPiece, new Vector3(3, -0.4f), Quaternion.identity);
+                piece.transform.SetParent(this.transform);
+            }
+            
         }
     }
 }
