@@ -130,4 +130,17 @@ public sealed class GameManager : Singleton<GameManager>
         base.OnDestroy();
     }
     
+	public void LevelFinish(){
+		if (nameScene == "level1-Tuto") {
+			SceneManager.LoadScene ("Level-LMGG");
+		}
+		else if (nameScene == "Level-LMGG") {
+			SceneManager.LoadScene ("level3 - whereIs");
+		}
+		//else if (nameScene == "level3 - whereIs") {
+		//	SceneManager.LoadScene ("fin");
+		//}
+
+	}
+
 }

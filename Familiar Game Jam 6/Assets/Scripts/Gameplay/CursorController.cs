@@ -16,8 +16,7 @@ public class CursorController : MonoBehaviour {
     string damageWhat = "NODAMAGE";
     Rect cameraRect;
 
-	//Evento de pantalla pasada
-	public event Action OnLevelFinish = delegate { };
+
 
 
     // Use this for initialization
@@ -241,18 +240,19 @@ public class CursorController : MonoBehaviour {
         {
             damageWhat = "LOSTLIVE";
         }
-		else if (coll.gameObject.tag.Equals("Coins"))
-		{
-			GameManager.Instance.coins++;
-			Destroy (coll.gameObject);
-		}
+
 		else if (coll.gameObject.tag.Equals("EndLevel"))
 		{
-			OnLevelFinish();
+			GameManager.Instance.LevelFinish ();
 		}
-        
+		else if (coll.gameObject.tag.Equals("Life"))
+		{
+			GameManager.Instance.lives++;
+			Destroy (coll.gameObject);
+		}
 
     }
+		
 
     void OnCollisionExit2D(Collision2D coll)
     {
@@ -296,6 +296,11 @@ public class CursorController : MonoBehaviour {
         {
             damageWhat = "LOSTLIVE";
         }
+		else if (other.gameObject.tag.Equals("Coins"))
+		{
+			GameManager.Instance.coins++;
+			Destroy (other.gameObject);
+		}
     }
 
     void OnTriggerExit2D(Collider2D other)
