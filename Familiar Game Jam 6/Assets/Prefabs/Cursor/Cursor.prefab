@@ -93,7 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorDir: {x: 0, y: 0}
   mouseSens: 2
-  sensPlus: 0
+  sensPlus: 4
   sensMin: 0
   time: 4
   lives: 0

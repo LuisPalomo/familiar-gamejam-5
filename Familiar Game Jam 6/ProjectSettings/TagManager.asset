@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Damage
   - DownRever
+  - DownSens
+  - UpSens
   layers:
   - Default
   - TransparentFX

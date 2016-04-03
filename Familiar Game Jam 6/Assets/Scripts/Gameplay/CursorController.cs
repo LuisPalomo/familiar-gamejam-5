@@ -29,10 +29,12 @@ public class CursorController : MonoBehaviour {
         switch (powerWhat)
         {
             case "NORMAL":
+                GetComponent<SpriteRenderer>().color = Color.white;
                 break;
             case "REVERSETIME":
                 if (timeA == time)
                 {
+                    GetComponent<SpriteRenderer>().color = Color.red;
                     mouseSens = mouseSens * (-1);
                 }
                 timeA -= Time.deltaTime;
@@ -46,6 +48,7 @@ public class CursorController : MonoBehaviour {
             case "SENSPLUS":
                 if (timeA == time)
                 {
+                    GetComponent<SpriteRenderer>().color = Color.green;
                     mouseSens = mouseSens + sensPlus;
                 }
                 timeA -= Time.deltaTime;
@@ -59,6 +62,7 @@ public class CursorController : MonoBehaviour {
             case "SENSMIN":
                 if (timeA == time)
                 {
+                    GetComponent<SpriteRenderer>().color = Color.blue;
                     mouseSens = mouseSens - sensMin;
                 }
                 timeA -= Time.deltaTime;
@@ -120,9 +124,13 @@ public class CursorController : MonoBehaviour {
             powerWhat = "REVERSETIME";
 
         }
-        else if (coll.gameObject.tag.Equals("SensDown"))
+        else if (coll.gameObject.tag.Equals("DownSens"))
         {
             powerWhat = "SENSMIN";
+        }
+        else if (coll.gameObject.tag.Equals("UpSens"))
+        {
+            powerWhat = "SENSPLUS";
         }
         else if (coll.gameObject.tag.Equals("Damage") && damageWhat.Equals("NODAMAGE"))
         {
@@ -134,15 +142,43 @@ public class CursorController : MonoBehaviour {
 
     void OnCollisionExit2D(Collision2D coll)
     {
-        if (coll.gameObject.tag.Equals("Damage") && damageWhat.Equals("NODAMAGE"))
+        if (coll.gameObject.tag.Equals("DownRever"))
+        {
+            powerWhat = "REVERSETIME";
+
+        }
+        else if (coll.gameObject.tag.Equals("DownSens"))
+        {
+            powerWhat = "SENSMIN";
+        }
+        else if (coll.gameObject.tag.Equals("UpSens"))
+        {
+            powerWhat = "SENSPLUS";
+        }
+        else if (coll.gameObject.tag.Equals("Damage") && damageWhat.Equals("NODAMAGE"))
         {
             damageWhat = "LOSTLIVE";
         }
+
+
     }
 
-        void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag.Equals("Damage") && damageWhat.Equals("NODAMAGE"))
+        if (other.gameObject.tag.Equals("DownRever"))
+        {
+            powerWhat = "REVERSETIME";
+
+        }
+        else if (other.gameObject.tag.Equals("DownSens"))
+        {
+            powerWhat = "SENSMIN";
+        }
+        else if (other.gameObject.tag.Equals("UpSens"))
+        {
+            powerWhat = "SENSPLUS";
+        }
+        else if (other.gameObject.tag.Equals("Damage") && damageWhat.Equals("NODAMAGE"))
         {
             damageWhat = "LOSTLIVE";
         }
