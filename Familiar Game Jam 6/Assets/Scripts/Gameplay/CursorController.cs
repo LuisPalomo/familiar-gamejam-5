@@ -55,6 +55,27 @@ public class CursorController : MonoBehaviour {
                     timeA = time;
                     powerWhat = "NORMAL";
                 }
+                switch (damageWhat)
+                {
+                    case "NODAMAGE":
+                        break;
+
+                    case "LOSTLIVE":
+                        if (timeA == time)
+                        {
+                            GetComponent<Animator>().SetBool("damageP", true);
+                            lives--;
+                            GameManager.Instance.lives--;
+                        }
+                        timeA -= Time.deltaTime;
+                        if (timeA < 0)
+                        {
+                            GetComponent<Animator>().SetBool("damageP", false);
+                            timeA = time;
+                            damageWhat = "NODAMAGE";
+                        }
+                        break;
+                }
                 break;
             case "SENSPLUS":
                 if (timeA == time)
@@ -68,6 +89,27 @@ public class CursorController : MonoBehaviour {
                     mouseSens = mouseSens - sensPlus;
                     timeA = time;
                     powerWhat = "NORMAL";
+                }
+                switch (damageWhat)
+                {
+                    case "NODAMAGE":
+                        break;
+
+                    case "LOSTLIVE":
+                        if (timeA == time)
+                        {
+                            GetComponent<Animator>().SetBool("damageP", true);
+                            lives--;
+                            GameManager.Instance.lives--;
+                        }
+                        timeA -= Time.deltaTime;
+                        if (timeA < 0)
+                        {
+                            GetComponent<Animator>().SetBool("damageP", false);
+                            timeA = time;
+                            damageWhat = "NODAMAGE";
+                        }
+                        break;
                 }
                 break;
             case "SENSMIN":
@@ -83,6 +125,27 @@ public class CursorController : MonoBehaviour {
                     timeA = time;
                     powerWhat = "NORMAL";
                 }
+                switch (damageWhat)
+                {
+                    case "NODAMAGE":
+                        break;
+
+                    case "LOSTLIVE":
+                        if (timeA == time)
+                        {
+                            GetComponent<Animator>().SetBool("damageP", true);
+                            lives--;
+                            GameManager.Instance.lives--;
+                        }
+                        timeA -= Time.deltaTime;
+                        if (timeA < 0)
+                        {
+                            GetComponent<Animator>().SetBool("damageP", false);
+                            timeA = time;
+                            damageWhat = "NODAMAGE";
+                        }
+                        break;
+                }
                 break;
             case "LOSTLIVE":
                 if (timeA == time)
@@ -97,6 +160,27 @@ public class CursorController : MonoBehaviour {
                     GetComponent<Animator>().SetBool("damageP", false);
                     timeA = time;
                     powerWhat = "NORMAL";
+                }
+                switch (damageWhat)
+                {
+                    case "NODAMAGE":
+                        break;
+
+                    case "LOSTLIVE":
+                        if (timeA == time)
+                        {
+                            GetComponent<Animator>().SetBool("damageP", true);
+                            lives--;
+                            GameManager.Instance.lives--;
+                        }
+                        timeA -= Time.deltaTime;
+                        if (timeA < 0)
+                        {
+                            GetComponent<Animator>().SetBool("damageP", false);
+                            timeA = time;
+                            damageWhat = "NODAMAGE";
+                        }
+                        break;
                 }
                 break;
         }
