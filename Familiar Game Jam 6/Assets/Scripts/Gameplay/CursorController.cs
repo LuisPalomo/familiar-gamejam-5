@@ -9,9 +9,11 @@ public class CursorController : MonoBehaviour {
     public float sensMin;
     public float time = 4;
     public int lives;
+    public Camera cam;
     float timeA;
     string powerWhat = "NORMAL";
     string damageWhat = "NODAMAGE";
+    Rect cameraRect;
 
 
     // Use this for initialization
@@ -19,7 +21,16 @@ public class CursorController : MonoBehaviour {
         timeA = time;
         lives = GameManager.Instance.lives;
 
-	}
+        var bottomLeft = cam.ScreenToWorldPoint(Vector3.zero);
+        var topRight = cam.ScreenToWorldPoint(new Vector3(
+                    cam.pixelWidth, cam.pixelHeight));
+
+        cameraRect = new Rect(
+                    bottomLeft.x,
+                    bottomLeft.y,
+                    topRight.x - bottomLeft.x,
+                    topRight.y - bottomLeft.y);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -110,7 +121,12 @@ public class CursorController : MonoBehaviour {
                 break;
         }
 
-	}
+        transform.position = new Vector3(
+     Mathf.Clamp(transform.position.x, cameraRect.xMin, cameraRect.xMax),
+     Mathf.Clamp(transform.position.y, cameraRect.yMin, cameraRect.yMax),
+     transform.position.z);
+
+    }
     void FixedUpdate()
     {
         cursorDir = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
