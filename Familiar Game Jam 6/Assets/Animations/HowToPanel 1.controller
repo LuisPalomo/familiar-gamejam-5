@@ -5,16 +5,16 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: HowToPanel
+  m_Name: HowToPanel 1
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: ComeIn
+  - m_Name: ComeIn2
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: ComeOut
+  - m_Name: ComeOut2
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -41,7 +41,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ComeIn
+    m_ConditionEvent: ComeIn2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110276812}
@@ -65,7 +65,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: ComeOut
+    m_ConditionEvent: ComeOut2
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110260886}

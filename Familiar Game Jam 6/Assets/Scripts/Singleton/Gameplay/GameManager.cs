@@ -49,10 +49,7 @@ public sealed class GameManager : Singleton<GameManager>
     void OnLevelWasLoaded(int level)
     {
         nameScene = SceneManager.GetSceneAt(level).name;
-        if (nameScene.Equals("AlphaGameplay"))
-        {
-
-        }
+        
 
     }
 
@@ -109,8 +106,7 @@ public sealed class GameManager : Singleton<GameManager>
     // Métodos de Monobehaviour
     private void Awake()
     {
-        GameManager.Instance.LoadData();
-        Localization.Initialize();
+        
     }
 
     void Start()
@@ -126,8 +122,13 @@ public sealed class GameManager : Singleton<GameManager>
 
     protected override void OnDestroy()
     {
-        GameManager.Instance.SaveData();
+       
         base.OnDestroy();
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     
 }
