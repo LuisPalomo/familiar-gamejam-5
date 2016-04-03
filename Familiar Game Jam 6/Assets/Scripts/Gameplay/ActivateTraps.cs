@@ -1,0 +1,66 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class ActivateTraps : MonoBehaviour {
+    public ElectricArc[] electricArcList;
+
+
+    public bool actTraps;
+
+    public float timeC;
+    public float timeS;
+
+    float timeA;
+    float timeB;
+
+    // Use this for initialization
+    void Start()
+    {
+        timeA = timeC;
+        timeB = timeS;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (actTraps==true)
+        {
+            if (timeA == timeC)
+            {
+                foreach (var electricArc in electricArcList)
+                {
+                    electricArc.gameObject.SetActive(false);
+                }
+            }
+            timeA -= Time.deltaTime;
+
+            if (timeA < 0)
+            {
+
+                if (timeB == timeS)
+                {
+                    foreach (var electricArc in electricArcList)
+                    {
+                        electricArc.gameObject.SetActive(true);
+                    }
+                }
+                timeB -= Time.deltaTime;
+                if (timeB < 0)
+                {
+                    timeA = timeC;
+                    timeB = timeS;
+                }
+
+            }
+        }
+        else
+        {
+            foreach (var electricArc in electricArcList)
+            {
+                electricArc.gameObject.SetActive(false);
+            }
+        }
+        
+
+    }
+}

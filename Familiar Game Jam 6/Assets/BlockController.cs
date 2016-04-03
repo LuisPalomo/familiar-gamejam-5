@@ -11,6 +11,8 @@ public class BlockController : MonoBehaviour
     public GameObject coinPrefab;
     public GameObject eggPrefab;
     public GameObject starPrefab;
+    public GameObject[] electricArcList;
+
 
     public SpriteRenderer spriteRenderer;
     public Sprite usedSprite;
@@ -30,6 +32,13 @@ public class BlockController : MonoBehaviour
                 this.spriteRenderer.sprite = this.usedSprite;
                 this.SpawnObject();
                 this.StartCoroutine(this.MakeBump());
+                if (electricArcList!=null)
+                {
+                    foreach (var electricArc in electricArcList)
+                    {
+                        electricArc.GetComponent<ActivateTraps>().actTraps=true;
+                    }
+                }
             }
         }
     }
