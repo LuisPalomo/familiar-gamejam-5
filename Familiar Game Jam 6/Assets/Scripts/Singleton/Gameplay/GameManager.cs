@@ -12,6 +12,7 @@ public sealed class GameManager : Singleton<GameManager>
 
     String nameScene;
     public int lives;
+    public int coins = 0;
     // Lenguaje
     private string gameLanguage;
     

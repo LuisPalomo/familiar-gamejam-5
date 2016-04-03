@@ -110,6 +110,7 @@ public class CursorController : MonoBehaviour {
                 {
                     GetComponent<Animator>().SetBool("damageP", true);
                     lives--;
+				GameManager.Instance.lives--;
                 }
                 timeA -= Time.deltaTime;
                 if (timeA < 0)
@@ -135,16 +136,16 @@ public class CursorController : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-         if (coll.gameObject.tag.Equals("DownRever"))
+         if (coll.gameObject.tag.Equals("DownRever") && powerWhat.Equals("NORMAL"))
         {
             powerWhat = "REVERSETIME";
 
         }
-        else if (coll.gameObject.tag.Equals("DownSens"))
+        else if (coll.gameObject.tag.Equals("DownSens") && powerWhat.Equals("NORMAL"))
         {
             powerWhat = "SENSMIN";
         }
-        else if (coll.gameObject.tag.Equals("UpSens"))
+        else if (coll.gameObject.tag.Equals("UpSens") && powerWhat.Equals("NORMAL"))
         {
             powerWhat = "SENSPLUS";
         }
@@ -152,22 +153,27 @@ public class CursorController : MonoBehaviour {
         {
             damageWhat = "LOSTLIVE";
         }
+		else if (coll.gameObject.tag.Equals("Coins"))
+		{
+			GameManager.Instance.coins++;
+			Destroy (coll.gameObject);
+		}
         
 
     }
 
     void OnCollisionExit2D(Collision2D coll)
     {
-        if (coll.gameObject.tag.Equals("DownRever"))
+        if (coll.gameObject.tag.Equals("DownRever") && powerWhat.Equals("NORMAL"))
         {
             powerWhat = "REVERSETIME";
 
         }
-        else if (coll.gameObject.tag.Equals("DownSens"))
+        else if (coll.gameObject.tag.Equals("DownSens") && powerWhat.Equals("NORMAL"))
         {
             powerWhat = "SENSMIN";
         }
-        else if (coll.gameObject.tag.Equals("UpSens"))
+        else if (coll.gameObject.tag.Equals("UpSens") && powerWhat.Equals("NORMAL"))
         {
             powerWhat = "SENSPLUS";
         }
@@ -181,16 +187,16 @@ public class CursorController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag.Equals("DownRever"))
+        if (other.gameObject.tag.Equals("DownRever") && powerWhat.Equals("NORMAL"))
         {
             powerWhat = "REVERSETIME";
 
         }
-        else if (other.gameObject.tag.Equals("DownSens"))
+        else if (other.gameObject.tag.Equals("DownSens") && powerWhat.Equals("NORMAL"))
         {
             powerWhat = "SENSMIN";
         }
-        else if (other.gameObject.tag.Equals("UpSens"))
+        else if (other.gameObject.tag.Equals("UpSens") && powerWhat.Equals("NORMAL"))
         {
             powerWhat = "SENSPLUS";
         }
