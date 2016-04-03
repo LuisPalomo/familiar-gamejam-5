@@ -95,9 +95,9 @@ namespace Extensions.UnityEngine
         public static void SetPositionY(this Transform transform, float value, TransformSpace transformSpace)
         {
             if (transformSpace == TransformSpace.Global)
-                transform.position = new Vector3(transform.position.y, value, transform.position.z);
+                transform.position = new Vector3(transform.position.x, value, transform.position.z);
             else
-                transform.localPosition = new Vector3(transform.position.y, value, transform.position.z);
+                transform.localPosition = new Vector3(transform.localPosition.x, value, transform.localPosition.z);
         }
         
         /// <summary>
