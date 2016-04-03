@@ -28,9 +28,31 @@ public class BlockController : MonoBehaviour
             {
                 this.used = true;
                 this.spriteRenderer.sprite = this.usedSprite;
+                this.SpawnObject();
                 this.StartCoroutine(this.MakeBump());
             }
         }
+    }
+
+    private void SpawnObject()
+    {
+        GameObject createdObject = null;
+        switch (this.contents)
+        {
+            case BlockContents.Coin:
+                createdObject = GameObject.Instantiate<GameObject>(this.coinPrefab);
+                break;
+            case BlockContents.Egg:
+                createdObject = GameObject.Instantiate<GameObject>(this.eggPrefab);
+                break;
+        }
+        
+        if (createdObject != null)
+        {
+            createdObject.transform.position = this.transform.position + (Vector3.up * 0.25f);
+            createdObject.transform.SetParent(this.transform.parent);
+        }
+                
     }
 
     // Update is called once per frame
