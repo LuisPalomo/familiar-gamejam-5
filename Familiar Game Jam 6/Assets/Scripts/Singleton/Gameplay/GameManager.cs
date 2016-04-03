@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,8 @@ public sealed class GameManager : Singleton<GameManager>
 {
     // ---- ---- ---- ---- ---- ---- ---- ----
     // Atributos
+    // ---- ---- ---- ---- ---- ---- ---- ----
+    public GameOverCanvasController gameOverScreen;
 
     String nameScene;
     public int lives;
@@ -18,7 +21,9 @@ public sealed class GameManager : Singleton<GameManager>
     
     // Datos guardados del juego
     private GamePersistentData gamePersistentData;
-    
+
+    private bool gameOverShown = false;
+
     // ---- ---- ---- ---- ---- ---- ---- ----
     // Propiedades
     // ---- ---- ---- ---- ---- ---- ---- ----
@@ -54,6 +59,13 @@ public sealed class GameManager : Singleton<GameManager>
 
         }
 
+        if (nameScene.Equals("MainMenu"))
+        {
+            lives = 3;
+            gameOverShown = false;
+
+            Time.timeScale = 1.0f;
+        }
     }
 
     // ---- ---- ---- ---- ---- ---- ---- ----
@@ -121,7 +133,29 @@ public sealed class GameManager : Singleton<GameManager>
 
     void Update()
     {
+        if (lives <= 0 && (!gameOverShown))
+        {
+            GameOverCanvasController gos = GameObject.Instantiate<GameOverCanvasController>(this.gameOverScreen);
+            gos.transform.position = new Vector3(0.0f, 0.0f, -0.5f);
+            gos.Show();
 
+            gameOverShown = true;
+
+            Time.timeScale = 0.0f;
+            StartCoroutine(ReturnToMainInSeconds(5.0f));
+        }
+    }
+
+    private IEnumerator ReturnToMainInSeconds(float p)
+    {
+        float time = 0.0f;
+        while (time < p)
+        {
+            time += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        ReturnToMainMenu();
     }
 
     protected override void OnDestroy()
@@ -142,5 +176,13 @@ public sealed class GameManager : Singleton<GameManager>
 		//}
 
 	}
+
+    public void ReturnToMainMenu()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        SceneManager.LoadScene("MainMenu");
+    }
 
 }

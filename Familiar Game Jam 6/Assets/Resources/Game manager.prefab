@@ -39,7 +39,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073b6e820a67c4237a6e0990771b3a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverScreen: {fileID: 11470436, guid: 6590270b46a591e49a554ce92a6b8428, type: 2}
   lives: 3
+  coins: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

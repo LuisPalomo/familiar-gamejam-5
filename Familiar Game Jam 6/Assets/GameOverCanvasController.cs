@@ -19,6 +19,11 @@ public class GameOverCanvasController : MonoBehaviour
 
     public void Awake()
     {
+        this.Initialize();
+    }
+
+    private void Initialize()
+    {
         this.canvasGroup = this.GetComponent<CanvasGroup>();
 
         this.canvasGroup.alpha = 0.0f;
@@ -29,8 +34,6 @@ public class GameOverCanvasController : MonoBehaviour
 
         this.returnButton.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
         this.returnText.color = new Color(0.125f, 0.125f, 0.125f, 0.0f);
-
-        this.Show();
     }
 
     public void Show()
@@ -48,7 +51,7 @@ public class GameOverCanvasController : MonoBehaviour
         {
             this.canvasGroup.alpha = normalizedTime;
             
-            normalizedTime += Time.deltaTime * inverseTotalTime;
+            normalizedTime += Time.unscaledDeltaTime * inverseTotalTime;
             yield return null;
         }
 
@@ -66,7 +69,7 @@ public class GameOverCanvasController : MonoBehaviour
             this.gameOverText.rotation = Quaternion.AngleAxis(this.gameOverRotation.Evaluate(normalizedTime), Vector3.back);
             this.gameOverText.localScale = Vector3.one * this.gameOverScale.Evaluate(normalizedTime);
 
-            normalizedTime += Time.deltaTime * inverseTotalTime;
+            normalizedTime += Time.unscaledDeltaTime * inverseTotalTime;
             yield return null;
         }
 
@@ -80,8 +83,8 @@ public class GameOverCanvasController : MonoBehaviour
         {
             this.returnButton.color = new Color(1.0f, 1.0f, 1.0f, normalizedTime);
             this.returnText.color = new Color(0.125f, 0.125f, 0.125f, normalizedTime);
-            
-            normalizedTime += Time.deltaTime * inverseTotalTime;
+
+            normalizedTime += Time.unscaledDeltaTime * inverseTotalTime;
             yield return null;
         }
 
